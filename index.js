@@ -29,14 +29,3 @@ client.messages.create({
 
 //Automatic response
 
-app.post('/sms',(req,res)=>{
-    const twiml = new messagingResponse();
-    twiml.message('Mensaje Recibido :)!');
-    res.writeHead(200,{'Content-Type':'text/xml'});
-    res.end(twiml.toString());
-
-});
-
-app.listen(400, ()=> {
-    console.log('Server on port 5000?');
-});
